@@ -11,20 +11,39 @@ public class PlayerCondition : MonoBehaviour , IDamagable
     public UICondition uiCondition;
 
     Condition health { get { return uiCondition.health; } }
-    Condition hunger { get { return uiCondition.hunger; } }
     Condition stamina { get { return uiCondition.stamina; } }
+    Condition hungry { get { return uiCondition.hungry; } }
+    Condition thirst { get { return uiCondition.thirst; } }
+    
 
-    public float noHungerHealthDecay;
+    public float noHungryHealthDecay;
+    public float noHungryStaminaDecay;
+    public float noThirstStaminaDecay;
     public event Action onTakeDamage;
 
     private void Update()
     {
-        hunger.Subtract(hunger.passiveValue * Time. deltaTime);
+        hungry.Subtract(hungry.passiveValue * Time. deltaTime);
+        thirst.Subtract(thirst.passiveValue * Time.deltaTime);
         stamina.Add(stamina.passiveValue * Time.deltaTime);
 
-        if (hunger.curValue == 0.0f)
+        if (hungry.curValue == 0.0f)
         {
-            health.Subtract(noHungerHealthDecay * Time.deltaTime);
+            health.Subtract(noHungryHealthDecay * Time.deltaTime);
+            stamina.Subtract(noHungryStaminaDecay * Time.deltaTime);
+        }
+        else
+        {
+            stamina.Add(stamina.curValue * Time.deltaTime * 100f);
+        }
+
+        if (thirst.curValue == 0.0f)
+        {
+            stamina.Subtract(noThirstStaminaDecay * Time.deltaTime);
+        }
+        else
+        {
+            stamina.Add(stamina.curValue * Time.deltaTime * 100f);
         }
 
         if (health.curValue == 0.0f)
@@ -40,12 +59,17 @@ public class PlayerCondition : MonoBehaviour , IDamagable
 
     public void Eat(float amount)
     {
-        hunger.Add(amount);
+        hungry.Add(amount);
+    }
+
+    public void Drink(float amount)
+    {
+        thirst.Add(amount);   
     }
 
     public void Die()
     {
-        Debug.Log("ÇÃ·¹ÀÌ¾î°¡ Á×¾ú´Ù.");
+        // »ç¸Á ÄûÁî ÆÐ³Î ¿ÀÇÂ
     }
 
     public void TakePhysicalDamage(int damageAmount)
