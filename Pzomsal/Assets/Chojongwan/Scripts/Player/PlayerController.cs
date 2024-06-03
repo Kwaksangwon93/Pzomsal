@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
 
         for (int i = 0; i < rays.Length; i++)
         {
-            if (Physics.Raycast(rays[i], 0.3f , groundLayerMask))
+            if (Physics.Raycast(rays[i], 1f , groundLayerMask))
             {
                 return true;
             }
