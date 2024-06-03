@@ -9,10 +9,9 @@ public enum ItemType
 
 public enum ConsumableType
 {
-    Hunger,
     Health,
-    Speed,
-    DoubleJump
+    Hunger,
+    Thirst
 }
 
 [System.Serializable]
@@ -22,7 +21,7 @@ public class ItemDataConsumable
     public float value;
 }
 
-[CreateAssetMenu(fileName = "Item", menuName = "New Item")]         //ScriptableObject를 사용한곳
+[CreateAssetMenu(fileName = "Item", menuName = "New Item")]
 public class ItemData : ScriptableObject
 {
     [Header("Info")]
