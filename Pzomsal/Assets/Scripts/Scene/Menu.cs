@@ -1,20 +1,21 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public GameObject menuStandPanel;
+    public GameObject menuPanel;
+    public GameObject soundMenu;
 
     [HideInInspector]
     public bool canOpen = true;
-    public Action menu;
 
     public void OnMenuButton(InputAction.CallbackContext callbackContext)
     {
         if (callbackContext.phase == InputActionPhase.Started)
         {
-            ToggleMenuStand();
+            ToggleMenu();
             ToggleCursor();
         }
     }
@@ -26,13 +27,36 @@ public class Menu : MonoBehaviour
         canOpen = !toggle;
     }
 
-    void ToggleMenuStand()
+    void ToggleMenu()
     {
-        if (menuStandPanel != null)
+        if (menuPanel != null)
         {
-            bool isActive = menuStandPanel.activeSelf;
+            bool isActive = menuPanel.activeSelf;
 
-            menuStandPanel.SetActive(!isActive);
+            menuPanel.SetActive(!isActive);
         }
+    }
+
+    public void SoundMenu()
+    {
+        soundMenu.SetActive(true);
+        menuPanel.SetActive(false);
+    }
+
+    public void Continue()
+    {
+        menuPanel.SetActive(false);
+        ToggleCursor();
+    }
+
+    public void GoToStartScene()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
+
+    public void GoBack()
+    {
+        soundMenu.SetActive(false);
+        menuPanel.SetActive(true);
     }
 }
