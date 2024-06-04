@@ -21,12 +21,12 @@ public class Condition : MonoBehaviour
 
     public void Add(float amount)
     {
-        curValue = Mathf.Min(curValue + amount, maxValue);      //최대 체력을 넘어가면 둘중 최소값을 적용하는 코드
+        curValue = Mathf.Min(curValue + amount, maxValue);
     }
 
     public void Subtract(float amount)
     {
-        curValue = Mathf.Max(curValue - amount, 0.0f);          //반대
+        curValue = Mathf.Max(curValue - amount, 0.0f);
     }
 
     public float GetPercentage()

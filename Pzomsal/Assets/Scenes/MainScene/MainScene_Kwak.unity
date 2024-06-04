@@ -1574,8 +1574,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 848256874}
-  hunger: {fileID: 0}
   stamina: {fileID: 1667145313}
+  hungry: {fileID: 1567902195}
+  thirst: {fileID: 1779693964}
 --- !u!114 &653933102
 MonoBehaviour:
   m_ObjectHideFlags: 0
