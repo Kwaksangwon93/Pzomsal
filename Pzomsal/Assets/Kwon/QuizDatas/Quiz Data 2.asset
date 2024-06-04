@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f18a0924b7c5742b89d174230269ec, type: 3}
   m_Name: Quiz Data 2
   m_EditorClassIdentifier: 
-  question: 
-  answer: 
-  wrong_1: 
-  wrong_2: 
-  wrong_3: 
+  question: 31
+  answer: 32
+  wrong_1: 33
+  wrong_2: 34
+  wrong_3: 35
