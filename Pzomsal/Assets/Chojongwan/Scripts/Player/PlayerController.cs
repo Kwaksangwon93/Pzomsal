@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rigidbody;
     private WaitForSeconds cachedWaitForSeconds;
-
+    public GameObject productionStandPanel;
 
     private void Awake()
     {
@@ -141,6 +141,22 @@ public class PlayerController : MonoBehaviour
         {
             inventory?.Invoke();
             ToggleCursor();
+        }
+    }
+    public void OnProductionStandButton(InputAction.CallbackContext callbackContext)
+    {
+        if (callbackContext.phase == InputActionPhase.Started)
+        {
+            ToggleProductionStand();
+            ToggleCursor();
+        }
+    }
+    void ToggleProductionStand()
+    {
+        if (productionStandPanel != null)
+        {
+            bool isActive = productionStandPanel.activeSelf;
+            productionStandPanel.SetActive(!isActive);
         }
     }
     void ToggleCursor()
