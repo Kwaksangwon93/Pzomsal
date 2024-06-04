@@ -7,6 +7,7 @@ public enum AIState
     Idle,
     Wandering,
     Attacking,
+    Die
 }
 
 public class Zombie : MonoBehaviour, IDamagable
@@ -57,8 +58,8 @@ public class Zombie : MonoBehaviour, IDamagable
     {
         playerDistance = Vector3.Distance(transform.position, CharacterManager.Instance.Player.transform.position);
 
-        animator.SetBool("Moving", aiState != AIState.Idle);
-        animator.SetBool("Running", playerDistance < detectDistance);
+        animator.SetBool("Moving", aiState != AIState.Idle && aiState != AIState.Die);
+        animator.SetBool("Running", playerDistance < detectDistance && aiState != AIState.Die);
 
         switch (aiState)
         {
@@ -189,6 +190,12 @@ public class Zombie : MonoBehaviour, IDamagable
     }
 
     void Die()
+    {
+        aiState = AIState.Die;
+        animator.SetTrigger("Die");
+    }
+
+    public void DieAnimEnd()
     {
         for (int i = 0; i < dropOnDeath.Length; i++)
         {

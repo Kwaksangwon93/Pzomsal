@@ -25,7 +25,6 @@ public class PlayerCondition : MonoBehaviour , IDamagable
     {
         hungry.Subtract(hungry.passiveValue * Time. deltaTime);
         thirst.Subtract(thirst.passiveValue * Time.deltaTime);
-        stamina.Add(stamina.passiveValue * Time.deltaTime);
 
         if (hungry.curValue == 0.0f)
         {
@@ -34,7 +33,7 @@ public class PlayerCondition : MonoBehaviour , IDamagable
         }
         else
         {
-            stamina.Add(stamina.curValue * Time.deltaTime * 100f);
+            stamina.Add(stamina.passiveValue * Time.deltaTime);
         }
 
         if (thirst.curValue == 0.0f)
@@ -43,7 +42,7 @@ public class PlayerCondition : MonoBehaviour , IDamagable
         }
         else
         {
-            stamina.Add(stamina.curValue * Time.deltaTime * 100f);
+            stamina.Add(stamina.passiveValue * Time.deltaTime);
         }
 
         if (health.curValue == 0.0f)
