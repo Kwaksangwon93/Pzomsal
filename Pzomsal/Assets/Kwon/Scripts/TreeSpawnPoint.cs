@@ -46,4 +46,9 @@ public class TreeSpawnPoint : MonoBehaviour
             a.qwe = randomIndex;
         }
     }
+
+    public void ResetIndex(int index)
+    {
+        check[index] = 0;
+    }
 }
