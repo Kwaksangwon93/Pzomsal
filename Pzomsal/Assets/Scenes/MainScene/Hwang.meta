@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Pzomsal/Assets/Scenes/MainScene/Hwang.meta
 guid: d4220dbf515549249ad82139d12b1932
+========
+guid: e0dafbd9b05c48d41a6e4e5be56a2702
+>>>>>>>> origin/Dev:Pzomsal/Assets/AssetStore/BG.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

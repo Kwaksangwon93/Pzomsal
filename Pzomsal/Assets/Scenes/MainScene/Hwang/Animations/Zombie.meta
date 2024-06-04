@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Pzomsal/Assets/Scenes/MainScene/Hwang/Animations/Zombie.meta
 guid: 4aa6b72e583d1054a8eab58dc5097faf
+========
+guid: 6f4f52e24e926d14db5fbf4e9e0ba1ee
+>>>>>>>> origin/Dev:Pzomsal/Assets/Prefab.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

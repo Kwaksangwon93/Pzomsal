@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Pzomsal/Assets/Scenes/MainScene/Hwang/Animations.meta
 guid: 4dc99d30eff5b0c42932c8d6b8431be6
+========
+guid: 3d33dd7b070255d48807975a9477ebb1
+>>>>>>>> origin/Dev:Pzomsal/Assets/AssetStore/Self_Images.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
