@@ -7,6 +7,7 @@ public class IronSpawnPoint : MonoBehaviour
     [SerializeField]
     private Transform[] spawnPoint;
     public ResouercePoolManager resouercePoolManager;
+    public GameObject pool;
 
     private int randomIndex;
     private int saveIndex;
@@ -17,6 +18,9 @@ public class IronSpawnPoint : MonoBehaviour
 
     private void Awake()
     {
+        pool = GameObject.Find("ResouercesPoolManager");
+        resouercePoolManager = pool.transform.GetComponent<ResouercePoolManager>();
+
         spawnPoint = GetComponentsInChildren<Transform>();
 
         check = new int[spawnPoint.Length];
