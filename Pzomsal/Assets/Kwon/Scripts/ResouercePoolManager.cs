@@ -21,11 +21,11 @@ public class ResouercePoolManager : MonoBehaviour
         }
     }
 
-    public GameObject GetTree()
+    public GameObject Get(int index)
     {
         GameObject select = null;
 
-        foreach (GameObject resouerce in resouercePools[0])
+        foreach (GameObject resouerce in resouercePools[index])
         {
             if (!resouerce.activeSelf)
             {
@@ -37,37 +37,11 @@ public class ResouercePoolManager : MonoBehaviour
 
         if (select == null)
         {
-            select = Instantiate(resouerces[0], transform);
-            resouercePools[0].Add(select);
+            select = Instantiate(resouerces[index], transform);
+            resouercePools[index].Add(select);
         }
 
 
         return select;
     }
-
-
-    public GameObject GetIron()
-    {
-        GameObject select = null;
-
-        foreach (GameObject resouerce in resouercePools[1])
-        {
-            if (!resouerce.activeSelf)
-            {
-                select = resouerce;
-                select.SetActive(true);
-                break;
-            }
-        }
-
-        if (select == null)
-        {
-            select = Instantiate(resouerces[1], transform);
-            resouercePools[1].Add(select);
-        }
-
-
-        return select;
-    }
-
 }

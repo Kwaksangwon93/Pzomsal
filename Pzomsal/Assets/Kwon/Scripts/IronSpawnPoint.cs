@@ -7,48 +7,62 @@ public class IronSpawnPoint : MonoBehaviour
     [SerializeField]
     private Transform[] spawnPoint;
     public ResouercePoolManager resouercePoolManager;
-    private int[] check;
+
     private int randomIndex;
-    private int count = 1;
+    private int saveIndex;
+
+    private int[] check;
+    private float[] respawnTime;
+
 
     private void Awake()
     {
         spawnPoint = GetComponentsInChildren<Transform>();
-        
+
         check = new int[spawnPoint.Length];
+        respawnTime = new float[spawnPoint.Length];
 
         for (int i = 0; i < check.Length; i++)
         {
             check[i] = 0;
+            respawnTime[i] = 0f;
         }
     }
 
     private void Update()
     {
-        if (count < spawnPoint.Length)
+        for (int i = 0; i < respawnTime.Length; i++)
         {
-            SetIron();
+            if (respawnTime[i] <= 0)
+                continue;
+
+            respawnTime[i] -= Time.deltaTime;
         }
+
+        SetIron();
     }
 
     public void SetIron()
     {
         randomIndex = Random.Range(1, spawnPoint.Length);
+        saveIndex = randomIndex;
 
-        if (check[randomIndex] == 0)
+        if (check[saveIndex] == 0 && respawnTime[saveIndex] <= 0)
         {
-            count++;
-            check[randomIndex] = 1;
-            GameObject tree = resouercePoolManager.GetIron();
+            check[saveIndex] = 1;
+            GameObject tree = resouercePoolManager.Get(1);
             tree.transform.position = spawnPoint[randomIndex].position;
 
-            var a = tree.gameObject.GetComponent<value>();
-            a.qwe = randomIndex;
+            if (tree.transform.GetComponent<value>().ironSpawnPoint == null)
+                tree.transform.GetComponent<value>().ironSpawnPoint = this;
+
+            tree.transform.GetComponent<value>().index = saveIndex;
         }
     }
 
-    public void ResetIndex(int index)
+    public void Disable(int index)
     {
         check[index] = 0;
+        respawnTime[index] = 60f;
     }
 }
