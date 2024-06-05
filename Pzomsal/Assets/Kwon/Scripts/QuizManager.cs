@@ -18,6 +18,7 @@ public class QuizManager : MonoBehaviour
 
     public QuizData[] quizDatas;
     private int i;
+    private int flag;
 
     private void Start()
     {
@@ -41,6 +42,7 @@ public class QuizManager : MonoBehaviour
 
     private void OnEnable()
     {
+        ToggleCursor();
         Time.timeScale = 0;
         time = 21f;
 
@@ -142,32 +144,38 @@ public class QuizManager : MonoBehaviour
 
     public void Correct()
     {
-        Debug.Log("정답");
-
         Time.timeScale = 1.0f;
+        ToggleCursor();
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Heal(100);
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Eat(100);
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Drink(100);
         this.gameObject.SetActive(false);
     }
 
     public void Incorrect()
-    {
-        Debug.Log("오답");
-
+    { 
         Time.timeScale = 1.0f;
+        ToggleCursor();
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Heal(50);
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Eat(50);
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Drink(50);
         this.gameObject.SetActive(false);
     }
 
     private void TimeOver()
     {
-        Debug.Log("시간초과");
-        
         Time.timeScale = 1.0f;
+        ToggleCursor();
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Heal(15);
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Eat(50);
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Drink(50);
         this .gameObject.SetActive(false);
     }
 
-
-    //public int Revive()
-    //{
-
-    //    return 
-    //}
+    void ToggleCursor()
+    {
+        bool toggle = Cursor.lockState == CursorLockMode.Locked;
+        Cursor.lockState = toggle ? CursorLockMode.None : CursorLockMode.Locked;
+        CharacterManager.Instance.Player.GetComponent<PlayerController>().canLook = !toggle;
+    }
 }
