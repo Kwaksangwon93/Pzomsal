@@ -31,7 +31,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rigidbody;
     private WaitForSeconds cachedWaitForSeconds;
     public GameObject productionStandPanel;
-
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -176,4 +175,6 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(time);
         moveSpeed -= value;
     }
+
+
 }
