@@ -7,21 +7,148 @@ using static System.Net.WebRequestMethods;
 
 public class QuizManager : MonoBehaviour
 {
+    
+    public QuizManager quizManager;
+
     public TextMeshProUGUI board;
-    public TextMeshProUGUI answer;
-    public TextMeshProUGUI wrong_1;
-    public TextMeshProUGUI wrong_2;
-    public TextMeshProUGUI wrong_3;
+    public Button button0;
+    public Button button1;
+    public Button button2;
+    public Button button3;
 
     public QuizData[] quizDatas;
+    private int i;
+
+    private void Awake()
+    {
+        quizManager = this;
+    }
+
 
     private void OnEnable()
     {
-        int i = Random.Range(0, quizDatas.Length);
+        Time.timeScale = 0;
+
+        i = Random.Range(0, quizDatas.Length);
+        int flag = Random.Range(0, 4);
+
         board.text = quizDatas[i].Question;
-        answer.text = quizDatas[i].Answer;
-        wrong_1.text = quizDatas[i].Wrong_1;
-        wrong_2.text = quizDatas[i].Wrong_2;
-        wrong_3.text = quizDatas[i].Wrong_3;
+
+        switch (flag)
+        {
+            case 0:
+                button0.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Answer;
+
+                button1.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Wrong_1;
+                button2.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Wrong_2;
+                button3.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Wrong_3;
+                break;
+            
+            case 1:
+                button1.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Answer;
+
+                button0.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Wrong_1;
+                button2.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Wrong_2;
+                button3.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Wrong_3;
+                break;
+            
+            case 2:
+                button2.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Answer;
+
+                button0.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Wrong_1;
+                button1.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Wrong_2;
+                button3.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Wrong_3;
+                break;
+            
+            case 3:
+                button3.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Answer;
+
+                button0.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Wrong_1;
+                button1.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Wrong_2;
+                button2.GetComponentInChildren<TextMeshProUGUI>().text = quizDatas[i].Wrong_3;
+                break;
+        }
+    }
+
+
+    public void CheckButton0()
+    {
+        if (button0.GetComponentInChildren<TextMeshProUGUI>().text == quizDatas[i].Answer)
+        {
+            Correct();
+        }
+
+        else
+        {
+            Incorrect();
+        }
+
+    }
+
+    public void CheckButton1()
+    {
+        if (button1.GetComponentInChildren<TextMeshProUGUI>().text == quizDatas[i].Answer)
+        {
+            Correct();
+        }
+
+        else
+        {
+            Incorrect();
+        }
+    }
+
+    public void CheckButton2()
+    {
+        if (button2.GetComponentInChildren<TextMeshProUGUI>().text == quizDatas[i].Answer)
+        {
+            Correct();
+        }
+
+        else
+        {
+            Incorrect();
+        }
+    }
+
+    public void CheckButton3()
+    {
+        if (button3.GetComponentInChildren<TextMeshProUGUI>().text == quizDatas[i].Answer) 
+        {
+            Correct();
+        }
+        
+        else
+        {
+            Incorrect();
+        }
+    }
+
+    public void Correct()
+    {
+        Debug.Log("정답");
+
+        /*
+         
+        플레이어 풀피 구현
+
+        */
+
+        Time.timeScale = 1.0f;
+        this.gameObject.SetActive(false);
+    }
+
+    public void Incorrect()
+    {
+        Debug.Log("오답");
+
+        /*
+
+       플레이어 반피 구현
+
+       */
+
+        Time.timeScale = 1.0f;
+        this.gameObject.SetActive(false);
     }
 }

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f18a0924b7c5742b89d174230269ec, type: 3}
   m_Name: Quiz Data 3
   m_EditorClassIdentifier: 
-  question: 41
-  answer: 42
-  wrong_1: 43
-  wrong_2: 44
-  wrong_3: 45
+  question: "\uBB38\uC81C 4"
+  answer: "\uBB38\uC81C 4 \uC815\uB2F5"
+  wrong_1: "\uBB38\uC81C 4 \uC624\uB2F5 1"
+  wrong_2: "\uBB38\uC81C 4 \uC624\uB2F5 2"
+  wrong_3: "\uBB38\uC81C 4 \uC624\uB2F5 3"
