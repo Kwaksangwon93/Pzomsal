@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Item_Battery
   m_EditorClassIdentifier: 
   displayName: "\uBC30\uD130\uB9AC"
-  description: "\uC911\uC694\uD55C \uBD80\uD488\uC774\uB2E4."
+  description: "\uC804\uB825\uC744 \uACF5\uAE09\uD558\uB294\uB370 \uC774\uC6A9\uD55C\uB2E4."
   type: 0
   weaponType: -1
   icon: {fileID: 21300000, guid: 4baa1087a9a9e0342888bc99165ff652, type: 3}
-  dropPrefab: {fileID: 0}
+  dropPrefab: {fileID: 5851858727680660731, guid: 706f57e0abacae74a974ac6220044ecb, type: 3}
   canStack: 1
   maxStackAmount: 12
   consumables: []

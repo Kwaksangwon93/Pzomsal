@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73a3b69737398e946b79f299ce96c41b, type: 3}
-  m_Name: Item_Tape
+  m_Name: Item_Radio
   m_EditorClassIdentifier: 
-  displayName: "\uD14C\uC774\uD504"
-  description: "\uBB34\uC5C7\uC778\uAC00 \uC5F0\uACB0\uD560 \uB54C \uC774\uC6A9\uD55C\uB2E4."
+  displayName: "\uD0C8\uCD9C \uD5EC\uAE30 \uD638\uCD9C\uC6A9 \uBB34\uC804\uAE30"
+  description: "\uD0C8\uCD9C\uC744 \uC704\uD55C \uD5EC\uAE30\uB97C \uBD80\uB97C\uC218\uC788\uB294
+    \uBB3C\uAC74\uC774\uB2E4."
   type: 0
   weaponType: -1
-  icon: {fileID: 21300000, guid: c5d9d84a6a6420e4fad414c46307a49d, type: 3}
-  dropPrefab: {fileID: 4914954943691264895, guid: 838f060dd8893124ba26f5bbf2c1538e, type: 3}
-  canStack: 1
-  maxStackAmount: 12
+  icon: {fileID: 21300000, guid: d1f09aaed345ecc41b41dad69c53cde2, type: 3}
+  dropPrefab: {fileID: 8770260535758429105, guid: befb34fd4024e9249838a75f00433913, type: 3}
+  canStack: 0
+  maxStackAmount: 1
   consumables: []
   equipPrefab: {fileID: 0}
