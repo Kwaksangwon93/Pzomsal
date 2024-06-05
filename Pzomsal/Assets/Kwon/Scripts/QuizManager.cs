@@ -32,7 +32,8 @@ public class QuizManager : MonoBehaviour
         i = Random.Range(0, quizDatas.Length);
         int flag = Random.Range(0, 4);
 
-        board.text = quizDatas[i].Question;
+        string text = quizDatas[i].Question.Replace("\\n", "\n");
+        board.text = text;
 
         switch (flag)
         {

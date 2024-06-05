@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f18a0924b7c5742b89d174230269ec, type: 3}
   m_Name: Quiz Data
   m_EditorClassIdentifier: 
-  question: "\uB2E4\uC74C \uBCF4\uAE30\uC5D0\uC11C <> \uC548\uC5D0 \uB4E4\uC5B4\uAC00\uB294
-    \uBD80\uBD84\uC5D0 \uB300\uD55C \uC815\uD655\uD55C Case\uB97C \uACE0\uB974\uC2DC\uC624. 
-    public class Question : MonoBehaviour {     public int <canYouSpeakCording>;
-    }"
+  question: "\uBB38\uC81C\\n\\n\uB2E4\uC74C \uBCF4\uAE30\uC5D0\uC11C <> \uC548\uC5D0
+    \uB4E4\uC5B4\uAC00\uB294 \uBD80\uBD84\uC5D0 \uB300\uD55C \uC815\uD655\uD55C Case\uB97C
+    \uACE0\uB974\uC2DC\uC624.\\n\\npublic class Question : MonoBehaviour\\n{\\n   
+    public int <canYouSpeakCording>; \\n}"
   answer: camelCase
   wrong_1: PascalCase
   wrong_2: snakecase

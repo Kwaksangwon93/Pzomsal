@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f18a0924b7c5742b89d174230269ec, type: 3}
   m_Name: Quiz Data 3
   m_EditorClassIdentifier: 
-  question: "\uBB38\uC81C 4"
-  answer: "\uBB38\uC81C 4 \uC815\uB2F5"
-  wrong_1: "\uBB38\uC81C 4 \uC624\uB2F5 1"
-  wrong_2: "\uBB38\uC81C 4 \uC624\uB2F5 2"
-  wrong_3: "\uBB38\uC81C 4 \uC624\uB2F5 3"
+  question: "\uBB38\uC81C\\n\\nint a = 13, int b = 10, int c = 4\uC77C \uB54C, \uC774
+    \uC218\uB4E4\uC744 \uB354\uD558\uACE0, \uBE7C\uACE0, \uACF1\uD558\uACE0, \uB098\uB204\uB294\\n\uC218\uD559\uC801
+    \uC811\uADFC\uC744 \uBB50\uB77C\uACE0 \uD560\uAE4C\uC694?\\n"
+  answer: "\uAC00\uAC10\uC2B9\uC81C"
+  wrong_1: "\uC0AC\uBD84\uBC95"
+  wrong_2: "\uD638\uC870\uBC95"
+  wrong_3: "\uADFC\uC758 \uACF5\uC2DD"
