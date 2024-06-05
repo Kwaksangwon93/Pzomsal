@@ -48,7 +48,8 @@ GameObject:
   - component: {fileID: 7385210662497486733}
   - component: {fileID: 1132934679465433481}
   - component: {fileID: 2988831388691113885}
-  m_Layer: 0
+  - component: {fileID: 4037369310336344609}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +81,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5073653995074369734}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -106,7 +107,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5073653995074369734}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 6a0f8c7e39ab44646b4068b7d807147a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -118,10 +119,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.18237853
-  m_Height: 1.0828063
+  m_Radius: 0.4460551
+  m_Height: 3.921707
   m_Direction: 1
-  m_Center: {x: 0, y: 0.26769912, z: 0.0011165142}
+  m_Center: {x: -0.10693252, y: -0.33577907, z: 0.15786058}
 --- !u!114 &5954215164137389657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +244,26 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 45c70c5b-6634-4bc3-b3b2-ad0decd7613e
     m_ActionName: Player/Attack[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8554b93e-7dc4-46eb-8d4b-d3ca82313bd0
+    m_ActionName: Player/Zoom[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4037369310336344609}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: OnMenuButton
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6c2ecd78-be52-4cec-87c2-02aecb8703ec
+    m_ActionName: Player/Menu[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -277,8 +298,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36df3dc08b2908c4d999b34620d05fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumptForce: 5
+  moveSpeed: 10
+  jumptForce: 10
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -301,7 +322,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCondition: {fileID: 0}
-  noHungerHealthDecay: 2
+  noHungryHealthDecay: 1.5
+  noHungryStaminaDecay: 0
+  noThirstStaminaDecay: 3
 --- !u!114 &1132934679465433481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,9 +355,24 @@ MonoBehaviour:
   maxCheckDistance: 3
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   curInteractGameObject: {fileID: 0}
   promptText: {fileID: 0}
+--- !u!114 &4037369310336344609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5073653995074369734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07aea17a7b2c3a40a6ced6395c2c383, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuStandPanel: {fileID: 0}
+  soundMenu: {fileID: 0}
+  canOpen: 1
 --- !u!1 &5258130455987054349
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +433,7 @@ Transform:
   m_GameObject: {fileID: 5263936702516341161}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
