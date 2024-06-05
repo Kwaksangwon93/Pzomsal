@@ -16,7 +16,7 @@ MonoBehaviour:
     \uAD11\uC6D0\uC740 \uC5B4\uB5A4 \uAD11\uC6D0\uC778\uC9C0 \uB9DE\uCD94\uC2DC\uC624.\\n\\n[
     \uB09C \uBC1D\uACE0 \uADE0\uB4F1\uD574, \uC778\uD14C\uB9AC\uC5B4 \uC870\uBA85\uC774\uB098
     \uCC9C\uC7A5, \uBCBD\uC5D0 \uC4F0\uAE30 \uC801\uD569\uD574 ]"
-  answer: Point Light
+  answer: Area Light
   wrong_1: Directional Light
   wrong_2: Spot Light
-  wrong_3: Area Light
+  wrong_3: Point Light
