@@ -9,6 +9,8 @@ public class CraftingManager : MonoBehaviour
 
     public ItemData woodItem;
     public ItemData ironItem;
+    public ItemData tape;
+    public ItemData battery;
     public ItemData item;
 
     public void CraftPickaxe()
@@ -47,8 +49,44 @@ public class CraftingManager : MonoBehaviour
             DropItem(item);
         }
     }
+    public void Bow()
+    {
+        int requiredWood = 15;
+        int requiredtape = 1;
 
+        int woodCount = GetItemCount(woodItem);
+        int tapeCount = GetItemCount(tape);
 
+        if(woodCount >= requiredWood && tapeCount >= requiredtape)
+        {
+            RemoveResources(woodItem, requiredWood);
+            RemoveResources(ironItem, requiredtape);
+
+            DropItem(item);
+        }
+    }
+    public void Radio()
+    {
+        int requiredWood = 2;
+        int requiredtape = 5;
+        int requiredIron = 3;
+        int requirdbattery = 2;
+
+        int woodCount = GetItemCount(woodItem);
+        int tapeCount = GetItemCount(tape);
+        int ironCount = GetItemCount(ironItem);
+        int batteryCount = GetItemCount(battery);
+
+        if(woodCount >= requiredWood &&ironCount >= requiredIron && batteryCount >= requirdbattery && tapeCount >= requiredtape)
+        {
+            RemoveResources(woodItem, requiredWood);
+            RemoveResources(ironItem, requiredIron);
+            RemoveResources(tape, requiredtape);
+            RemoveResources(battery, requirdbattery);
+
+            DropItem(item);
+        }
+    }
     // 필요한 자원을 가지고 있는지 확인하는 메서드
     private bool HasEnoughResources(int requiredWood, int requiredIron)
     {
