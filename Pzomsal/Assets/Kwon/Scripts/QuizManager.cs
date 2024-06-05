@@ -7,9 +7,6 @@ using static System.Net.WebRequestMethods;
 
 public class QuizManager : MonoBehaviour
 {
-    
-    public QuizManager quizManager;
-
     public TextMeshProUGUI board;
     public Button button0;
     public Button button1;
@@ -22,9 +19,10 @@ public class QuizManager : MonoBehaviour
     public QuizData[] quizDatas;
     private int i;
 
-    private void Awake()
+    private void Start()
     {
-        quizManager = this;
+        Time.timeScale = 1.0f;
+        this.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -43,6 +41,7 @@ public class QuizManager : MonoBehaviour
 
     private void OnEnable()
     {
+        ToggleCursor();
         Time.timeScale = 0;
         time = 21f;
 
@@ -144,40 +143,41 @@ public class QuizManager : MonoBehaviour
 
     public void Correct()
     {
-        Debug.Log("정답");
-
-        /*
-         
-        플레이어 풀피 구현
-
-        */
-
         Time.timeScale = 1.0f;
+        ToggleCursor();
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Heal(100);
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Eat(100);
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Drink(100);
         this.gameObject.SetActive(false);
     }
 
     public void Incorrect()
-    {
-        Debug.Log("오답");
-
-        /*
-
-       플레이어 반피 구현
-
-       */
-
+    { 
         Time.timeScale = 1.0f;
+        ToggleCursor();
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Heal(50);
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Eat(50);
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Drink(50);
         this.gameObject.SetActive(false);
     }
 
     private void TimeOver()
     {
-        Debug.Log("시간초과");
-        /*
-         * 플레이어 딸피 구현
-         */
-
         Time.timeScale = 1.0f;
+        ToggleCursor();
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Heal(15);
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Eat(50);
+        CharacterManager.Instance.Player.GetComponent<PlayerCondition>().Drink(50);
         this .gameObject.SetActive(false);
+    }
+
+    void ToggleCursor()
+    {
+        if (CharacterManager.Instance != null && CharacterManager.Instance.Player != null)
+        {
+            bool toggle = Cursor.lockState == CursorLockMode.Locked;
+            Cursor.lockState = toggle ? CursorLockMode.None : CursorLockMode.Locked;
+            CharacterManager.Instance.Player.GetComponent<PlayerController>().canLook = !toggle;
+        }
     }
 }

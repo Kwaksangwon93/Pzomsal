@@ -9,12 +9,17 @@ public interface IDamagable
 public class PlayerCondition : MonoBehaviour , IDamagable
 {
     public UICondition uiCondition;
+    public GameObject quiz;
 
     Condition health { get { return uiCondition.health; } }
     Condition stamina { get { return uiCondition.stamina; } }
     Condition hungry { get { return uiCondition.hungry; } }
     Condition thirst { get { return uiCondition.thirst; } }
-    
+
+    private void Awake()
+    {
+        quiz = GameObject.Find("Quiz");
+    }
 
     public float noHungryHealthDecay;
     public float noHungryStaminaDecay;
@@ -68,7 +73,7 @@ public class PlayerCondition : MonoBehaviour , IDamagable
 
     public void Die()
     {
-        // »ç¸Á ÄûÁî ÆÐ³Î ¿ÀÇÂ
+        quiz.gameObject.SetActive(true);
     }
 
     public void TakePhysicalDamage(int damageAmount)
