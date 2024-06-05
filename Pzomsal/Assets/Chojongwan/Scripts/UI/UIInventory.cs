@@ -21,6 +21,7 @@ public class UIInventory : MonoBehaviour
     public GameObject equipButton;
     public GameObject unEquipButton;
     public GameObject dropButton;
+    // GameObject craftButton;
 
     int curEquipIndex;
 
@@ -160,6 +161,7 @@ public class UIInventory : MonoBehaviour
         equipButton.SetActive(false);
         unEquipButton.SetActive(false);
         dropButton.SetActive(false);
+        //craftButton.SetActive(false);
     }
     public void SelectItem(int index)
     {
@@ -184,6 +186,7 @@ public class UIInventory : MonoBehaviour
         equipButton.SetActive(selectedItem.type == ItemType.Equipable && !slots[index].equipped);
         unEquipButton.SetActive(selectedItem.type == ItemType.Equipable && slots[index].equipped);
         dropButton.SetActive(true);
+        //craftButton.SetActive(true);
     }
     public void OnUseButton()
     {
@@ -197,6 +200,8 @@ public class UIInventory : MonoBehaviour
                         condition.Heal(selectedItem.consumables[i].value); break;
                     case ConsumableType.Hunger:
                         condition.Eat(selectedItem.consumables[i].value); break;
+                    case ConsumableType.Thirst:
+                        condition.Drink(selectedItem.consumables[i].value); break;
                 }
             }
             RemoveSelectedItem();
@@ -249,6 +254,7 @@ public class UIInventory : MonoBehaviour
     {
         UnEquip(selectedItemIndex);
     }
+    
     public bool HasItem(ItemData item, int quantity)
     {
         return false;

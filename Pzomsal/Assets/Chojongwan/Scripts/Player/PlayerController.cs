@@ -30,8 +30,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rigidbody;
     private WaitForSeconds cachedWaitForSeconds;
-
-
+    public GameObject productionStandPanel;
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -143,6 +142,22 @@ public class PlayerController : MonoBehaviour
             ToggleCursor();
         }
     }
+    public void OnProductionStandButton(InputAction.CallbackContext callbackContext)
+    {
+        if (callbackContext.phase == InputActionPhase.Started)
+        {
+            ToggleProductionStand();
+            ToggleCursor();
+        }
+    }
+    void ToggleProductionStand()
+    {
+        if (productionStandPanel != null)
+        {
+            bool isActive = productionStandPanel.activeSelf;
+            productionStandPanel.SetActive(!isActive);
+        }
+    }
     void ToggleCursor()
     {
         bool toggle = Cursor.lockState == CursorLockMode.Locked;
@@ -160,4 +175,6 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(time);
         moveSpeed -= value;
     }
+
+
 }

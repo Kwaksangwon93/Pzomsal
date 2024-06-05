@@ -23,7 +23,7 @@ public class PlayerCondition : MonoBehaviour , IDamagable
 
     private void Update()
     {
-        hungry.Subtract(hungry.passiveValue * Time. deltaTime);
+        hungry.Subtract(hungry.passiveValue * Time.deltaTime);
         thirst.Subtract(thirst.passiveValue * Time.deltaTime);
 
         if (hungry.curValue == 0.0f)
