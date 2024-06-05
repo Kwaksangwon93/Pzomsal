@@ -9,30 +9,28 @@ public class Equipment : MonoBehaviour
     public Transform equipParent;
 
     private PlayerController controller;
-
-    public EquipTool equipTool;
+    private PlayerCondition condition;
+    //public EquipTool equipTool;
 
     public bool isZoomed;
 
     void Start()
     {
         controller = CharacterManager.Instance.Player.controller;
+        condition = CharacterManager.Instance.Player.condition;
     }
 
     public void OnAttackInput(InputAction.CallbackContext context)
     {
         if (curEquip != null && controller.canLook)
         {
-            if (curEquip.weaponType == WeaponType.Arrow)
+            if (context.phase == InputActionPhase.Performed)
             {
-                if (context.phase == InputActionPhase.Performed && isZoomed)
+                if (curEquip.weaponType == WeaponType.Arrow && isZoomed)
                 {
                     curEquip.OnAttackInput();
                 }
-            }
-            else
-            {
-                if (context.phase == InputActionPhase.Performed)
+                else
                 {
                     curEquip.OnAttackInput();
                 }

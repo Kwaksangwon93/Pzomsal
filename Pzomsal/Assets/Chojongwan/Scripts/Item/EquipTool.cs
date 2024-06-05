@@ -33,6 +33,7 @@ public class EquipTool : Equip
         animator = GetComponent<Animator>();
 
         mainCamera = Camera.main;
+        camera = mainCamera; // camera 변수를 mainCamera로 초기화합니다.
     }
 
     public override void OnAttackInput()
