@@ -199,7 +199,12 @@ public class Zombie : MonoBehaviour, IDamagable
     {
         for (int i = 0; i < dropOnDeath.Length; i++)
         {
-            Instantiate(dropOnDeath[i].dropPrefab, transform.position + Vector3.up * 2, Quaternion.identity);
+            float randomValue = Random.Range(0f, 100f);
+
+            if (randomValue < 20f)
+            {
+                Instantiate(dropOnDeath[i].dropPrefab, transform.position + Vector3.up * 2, Quaternion.identity);
+            }
         }
 
         Destroy(gameObject);

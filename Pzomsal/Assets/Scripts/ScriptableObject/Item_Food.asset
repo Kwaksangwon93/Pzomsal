@@ -15,6 +15,7 @@ MonoBehaviour:
   displayName: "\uBE44\uC0C1\uC2DD\uB7C9"
   description: "\uBC30\uACE0\uD514\uC744 30 \uD68C\uBCF5\uD55C\uB2E4."
   type: 2
+  weaponType: -1
   icon: {fileID: 21300000, guid: f10a1cfeeb2f7c34795a56e280a20714, type: 3}
   dropPrefab: {fileID: 1896720402374228, guid: baa8d2066558c9a4ebcd1853c4c3ac4e, type: 3}
   canStack: 1
