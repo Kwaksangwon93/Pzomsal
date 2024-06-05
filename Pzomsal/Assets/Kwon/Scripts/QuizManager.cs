@@ -7,9 +7,6 @@ using static System.Net.WebRequestMethods;
 
 public class QuizManager : MonoBehaviour
 {
-    
-    public QuizManager quizManager;
-
     public TextMeshProUGUI board;
     public Button button0;
     public Button button1;
@@ -22,9 +19,10 @@ public class QuizManager : MonoBehaviour
     public QuizData[] quizDatas;
     private int i;
 
-    private void Awake()
+    private void Start()
     {
-        quizManager = this;
+        Time.timeScale = 1.0f;
+        this.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -146,12 +144,6 @@ public class QuizManager : MonoBehaviour
     {
         Debug.Log("정답");
 
-        /*
-         
-        플레이어 풀피 구현
-
-        */
-
         Time.timeScale = 1.0f;
         this.gameObject.SetActive(false);
     }
@@ -160,12 +152,6 @@ public class QuizManager : MonoBehaviour
     {
         Debug.Log("오답");
 
-        /*
-
-       플레이어 반피 구현
-
-       */
-
         Time.timeScale = 1.0f;
         this.gameObject.SetActive(false);
     }
@@ -173,11 +159,15 @@ public class QuizManager : MonoBehaviour
     private void TimeOver()
     {
         Debug.Log("시간초과");
-        /*
-         * 플레이어 딸피 구현
-         */
-
+        
         Time.timeScale = 1.0f;
         this .gameObject.SetActive(false);
     }
+
+
+    //public int Revive()
+    //{
+
+    //    return 
+    //}
 }
