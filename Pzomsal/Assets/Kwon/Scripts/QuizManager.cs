@@ -18,7 +18,6 @@ public class QuizManager : MonoBehaviour
 
     public QuizData[] quizDatas;
     private int i;
-    private int flag;
 
     private void Start()
     {
