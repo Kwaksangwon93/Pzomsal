@@ -23,7 +23,7 @@ public class PlayerCondition : MonoBehaviour , IDamagable
 
     private void Update()
     {
-        hungry.Subtract(hungry.passiveValue * Time. deltaTime);
+        hungry.Subtract(hungry.passiveValue * Time.deltaTime);
         thirst.Subtract(thirst.passiveValue * Time.deltaTime);
         stamina.Add(stamina.passiveValue * Time.deltaTime);
 
@@ -43,7 +43,7 @@ public class PlayerCondition : MonoBehaviour , IDamagable
         }
         else
         {
-            stamina.Add(stamina.curValue * Time.deltaTime * 100f);
+            stamina.Add(stamina.curValue * Time.deltaTime);
         }
 
         if (health.curValue == 0.0f)
