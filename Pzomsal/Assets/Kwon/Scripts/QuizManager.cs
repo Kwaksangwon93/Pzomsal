@@ -16,6 +16,9 @@ public class QuizManager : MonoBehaviour
     public Button button2;
     public Button button3;
 
+    public TextMeshProUGUI timeText;
+    private float time;
+
     public QuizData[] quizDatas;
     private int i;
 
@@ -24,10 +27,24 @@ public class QuizManager : MonoBehaviour
         quizManager = this;
     }
 
+    private void Update()
+    {
+        time -= Time.unscaledDeltaTime;
+        
+        timeText.text = ((int)time).ToString();
+
+        if(time <= 0f)
+        {
+            TimeOver();
+        }
+    }
+
+    
 
     private void OnEnable()
     {
         Time.timeScale = 0;
+        time = 21f;
 
         i = Random.Range(0, quizDatas.Length);
         int flag = Random.Range(0, 4);
@@ -151,5 +168,16 @@ public class QuizManager : MonoBehaviour
 
         Time.timeScale = 1.0f;
         this.gameObject.SetActive(false);
+    }
+
+    private void TimeOver()
+    {
+        Debug.Log("시간초과");
+        /*
+         * 플레이어 딸피 구현
+         */
+
+        Time.timeScale = 1.0f;
+        this .gameObject.SetActive(false);
     }
 }
