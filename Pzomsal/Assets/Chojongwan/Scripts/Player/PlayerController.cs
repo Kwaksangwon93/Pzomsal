@@ -31,6 +31,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rigidbody;
     private WaitForSeconds cachedWaitForSeconds;
     public GameObject productionStandPanel;
+
+    private Menu menu;
+
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -39,6 +42,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;       //커서를 숨기는 코드
+        menu = GetComponent<Menu>();
     }
 
     private void FixedUpdate()
@@ -48,7 +52,7 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (canLook)
+        if (canLook && menu.canOpen)
         {
             CameraLook();
         }
@@ -103,7 +107,7 @@ public class PlayerController : MonoBehaviour
         rigidbody.velocity = dir;
     }
 
-    void CameraLook()
+    public void CameraLook()
     {
         camCurXRot += mouseDelta.y * lookSensitivity;               //y값과 * 민감도
         camCurXRot = Mathf.Clamp(camCurXRot, minXLook, maxXLook);   //최소값보다 작아지면 최소값을 반환하고 최대값보다 커지면 최대값 반환

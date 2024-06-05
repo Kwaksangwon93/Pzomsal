@@ -11,6 +11,8 @@ public class Menu : MonoBehaviour
     [HideInInspector]
     public bool canOpen = true;
 
+    private PlayerController playerController;
+
     public void OnMenuButton(InputAction.CallbackContext callbackContext)
     {
         if (callbackContext.phase == InputActionPhase.Started)

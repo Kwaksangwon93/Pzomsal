@@ -6986,7 +6986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1389055954816771964, guid: b4e9c74a0a60c9d489104bd78baad562, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1837924889855408550, guid: b4e9c74a0a60c9d489104bd78baad562, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7792,7 +7792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 3650451126005667201, guid: 8537f1619327a0748a85e105e2887623, type: 3}
-  ZombieCount: 30
+  ZombieCount: 50
   minDistanceToPlayer: 30
 --- !u!1 &1045063992 stripped
 GameObject:
