@@ -15,7 +15,7 @@ public class HomeManager : MonoBehaviour
     }
     public void CreateHome()
     {
-        int requiredWood = 20;
+        int requiredWood = 19;
 
         int woodCount = GetItemCount(woodItem);
 
@@ -33,7 +33,7 @@ public class HomeManager : MonoBehaviour
     }
     public void CreateHome2()
     {
-        int requiredWood = 45;
+        int requiredWood = 44;
 
         int woodCount = GetItemCount(woodItem);
 

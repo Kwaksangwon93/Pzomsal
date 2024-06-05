@@ -3718,6 +3718,8 @@ MonoBehaviour:
   inventory: {fileID: 651112913}
   woodItem: {fileID: 0}
   ironItem: {fileID: 0}
+  tape: {fileID: 0}
+  battery: {fileID: 0}
   item: {fileID: 0}
 --- !u!114 &519303550
 MonoBehaviour:
@@ -7186,6 +7188,8 @@ MonoBehaviour:
   inventory: {fileID: 651112913}
   woodItem: {fileID: 11400000, guid: 5ecc14062087fa54e8810dd5888c96b5, type: 2}
   ironItem: {fileID: 11400000, guid: f2e8f6cae2917804e8e728bec12744b0, type: 2}
+  tape: {fileID: 0}
+  battery: {fileID: 0}
   item: {fileID: 11400000, guid: 106a77a042b1738489e75797cbf3a2c6, type: 2}
 --- !u!114 &917545058
 MonoBehaviour:
@@ -8448,6 +8452,8 @@ MonoBehaviour:
   inventory: {fileID: 651112913}
   woodItem: {fileID: 11400000, guid: 5ecc14062087fa54e8810dd5888c96b5, type: 2}
   ironItem: {fileID: 11400000, guid: f2e8f6cae2917804e8e728bec12744b0, type: 2}
+  tape: {fileID: 0}
+  battery: {fileID: 0}
   item: {fileID: 11400000, guid: d7ae4dd42aa57a54cba77355067ba28a, type: 2}
 --- !u!114 &1148063917
 MonoBehaviour:
@@ -10931,6 +10937,8 @@ MonoBehaviour:
   inventory: {fileID: 651112913}
   woodItem: {fileID: 11400000, guid: 5ecc14062087fa54e8810dd5888c96b5, type: 2}
   ironItem: {fileID: 0}
+  tape: {fileID: 0}
+  battery: {fileID: 0}
   item: {fileID: 11400000, guid: d8178f24e1fd8cf41a5e7561f7501cd5, type: 2}
 --- !u!114 &1420596356
 MonoBehaviour:
@@ -12046,9 +12054,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropPoint: {fileID: 1045338934}
   inventory: {fileID: 651112913}
-  woodItem: {fileID: 0}
+  woodItem: {fileID: 11400000, guid: 5ecc14062087fa54e8810dd5888c96b5, type: 2}
   ironItem: {fileID: 0}
-  item: {fileID: 0}
+  tape: {fileID: 0}
+  battery: {fileID: 0}
+  item: {fileID: 11400000, guid: d3e21ba6cc8889644a61421038ad0de8, type: 2}
 --- !u!114 &1613341170
 MonoBehaviour:
   m_ObjectHideFlags: 0
