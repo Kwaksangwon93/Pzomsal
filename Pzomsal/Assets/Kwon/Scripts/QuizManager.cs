@@ -173,8 +173,11 @@ public class QuizManager : MonoBehaviour
 
     void ToggleCursor()
     {
-        bool toggle = Cursor.lockState == CursorLockMode.Locked;
-        Cursor.lockState = toggle ? CursorLockMode.None : CursorLockMode.Locked;
-        CharacterManager.Instance.Player.GetComponent<PlayerController>().canLook = !toggle;
+        if (CharacterManager.Instance != null && CharacterManager.Instance.Player != null)
+        {
+            bool toggle = Cursor.lockState == CursorLockMode.Locked;
+            Cursor.lockState = toggle ? CursorLockMode.None : CursorLockMode.Locked;
+            CharacterManager.Instance.Player.GetComponent<PlayerController>().canLook = !toggle;
+        }
     }
 }
