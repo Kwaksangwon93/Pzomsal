@@ -46,12 +46,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c05d1f11b3cd15b4098630aa81b9417b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponType: 0
   attackRate: 0.8
   attackDistance: 1
   doesGatherResources: 0
   doesDealDamage: 1
   damage: 10
   useStamina: 15
+  isZoomed: 0
+  arrowPrefab: {fileID: 0}
+  arrowSpawnPoint: {fileID: 0}
+  zoomedFOV: 0
+  arrowSpeed: 0
 --- !u!95 &-3050868183664499181
 Animator:
   serializedVersion: 5

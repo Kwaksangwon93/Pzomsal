@@ -14,6 +14,15 @@ public enum ConsumableType
     Thirst
 }
 
+public enum WeaponType
+{
+    Default = -1,
+    Arrow,
+    Ax,
+    Pickaxe,
+    Max
+}
+
 [System.Serializable]
 public class ItemDataConsumable
 {
@@ -28,6 +37,7 @@ public class ItemData : ScriptableObject
     public string displayName;
     public string description;
     public ItemType type;
+    public WeaponType weaponType;
     public Sprite icon;
     public GameObject dropPrefab;
 

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: "\uCE7C"
   description: "\uBB34\uAE30"
-  type: 1
+  type: 0
+  weaponType: -1
   icon: {fileID: 21300000, guid: 4f2f320a217307a48a107491b1d17ebb, type: 3}
   dropPrefab: {fileID: 8912214445870764219, guid: 7d6255f6514e7174d888267b27f2e371, type: 3}
   canStack: 0

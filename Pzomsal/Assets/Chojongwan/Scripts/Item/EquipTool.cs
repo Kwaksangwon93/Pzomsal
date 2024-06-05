@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 
 public class EquipTool : Equip
 {
@@ -17,10 +18,21 @@ public class EquipTool : Equip
     private Camera camera;
     public float useStamina;
 
+    public bool isZoomed = false;
+
+    [Header("Arrow")]
+    public GameObject arrowPrefab; // 화살
+    public Transform arrowSpawnPoint; // 화살 생성 위치
+
+    private Camera mainCamera;
+    private float originalFOV = 60f;
+    public float zoomedFOV = 30f;
+
     private void Awake()
     {
-        camera = Camera.main;
         animator = GetComponent<Animator>();
+
+        mainCamera = Camera.main;
     }
 
     public override void OnAttackInput()
@@ -40,6 +52,32 @@ public class EquipTool : Equip
     {
         attacking = false;
     }
+
+    public override void OnZoomInput(bool isZooming)
+    {
+        isZoomed = isZooming;
+
+        animator.SetBool("Zoom", isZoomed);
+
+        if (isZoomed) mainCamera.fieldOfView = zoomedFOV;
+        else mainCamera.fieldOfView = originalFOV;
+    }
+
+    public float arrowSpeed = 10f;
+
+    public void ShootArrow()
+    {
+        Vector3 cameraCenterDirection = mainCamera.transform.forward; // 카메라 정 중앙 방향 벡터
+
+        GameObject arrowObject = Instantiate(arrowPrefab, arrowSpawnPoint.position, arrowSpawnPoint.rotation); // 화살 생성
+
+        arrowObject.transform.forward = cameraCenterDirection; // 화살 방향
+
+        Rigidbody arrowRigidbody = arrowObject.GetComponent<Rigidbody>();
+
+        arrowRigidbody.velocity = cameraCenterDirection.normalized * arrowSpeed; // 발사
+    }
+
     public void OnHit()
     {
         Ray ray = camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));

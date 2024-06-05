@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f18a0924b7c5742b89d174230269ec, type: 3}
+  m_Name: Quiz Data 1
+  m_EditorClassIdentifier: 
+  question: "\uBB38\uC81C\\n\\n\uB2E4\uC74C \uB0B4\uC6A9\uC744 \uBCF4\uACE0 Git\uC758
+    \uAE30\uB2A5 \uC911 \uC5B4\uB5A4 \uAC83\uC744 \uB9D0\uD558\uB294 \uAC83\uC778\uC9C0
+    \uB9DE\uCD94\uC2DC\uC624.\\n\\n[ \uBC29\uAE08 Commit\uD55C \uB0B4\uC6A9\uC744
+    \uCDE8\uC18C\uD560\uAC70\uC57C \uD558\uC9C0\uB9CC Changes\uB85C \uBCF5\uAD6C\uB3C4
+    \uD558\uACE0 \uC2F6\uC5B4]\\n"
+  answer: Amend
+  wrong_1: Revert
+  wrong_2: Undo
+  wrong_3: Merge
