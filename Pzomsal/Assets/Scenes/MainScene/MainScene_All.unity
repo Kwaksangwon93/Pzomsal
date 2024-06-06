@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4078,7 +4078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8151412450914804969, guid: f460d51796b3fd7488516bb1d55de965, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7858,9 +7858,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 3650451126005667201, guid: 8537f1619327a0748a85e105e2887623, type: 3}
-  ZombieCount: 50
+  maxZombieCount: 0
   minDistanceToPlayer: 30
   spawnRadius: 150
+  spawnInterval: 20
 --- !u!1 &1045063992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6693782793470717646, guid: 2ba0889da1340d2419512154c15af578, type: 3}
