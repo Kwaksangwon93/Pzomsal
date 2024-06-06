@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponType: -1
-  attackRate: 0.8
+  attackRate: 1.5
   attackDistance: 1
   doesGatherResources: 1
   doesDealDamage: 1
@@ -56,8 +56,8 @@ MonoBehaviour:
   isZoomed: 0
   arrowPrefab: {fileID: 0}
   arrowSpawnPoint: {fileID: 0}
-  zoomedFOV: 30
-  arrowSpeed: 10
+  zoomedFOV: 0
+  arrowSpeed: 0
 --- !u!95 &56567639148088394
 Animator:
   serializedVersion: 5
