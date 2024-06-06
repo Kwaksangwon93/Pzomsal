@@ -57,10 +57,7 @@ public class Equipment : MonoBehaviour
 
     bool InventoryContainsArrow()
     {
-        if (inventory == null)
-        {
-            return false;
-        }
+        if (inventory == null) return false;
 
         foreach (ItemSlot slot in inventory.slots)
         {

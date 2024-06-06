@@ -27,7 +27,7 @@ public class UIInventory : MonoBehaviour
 
     private PlayerController controller;
     private PlayerCondition condition;
-
+    public ItemSpawn itemSpawn;
     ItemData selectedItem;
     int selectedItemIndex = 0;
 
@@ -190,6 +190,8 @@ public class UIInventory : MonoBehaviour
     }
     public void OnUseButton()
     {
+        itemSpawn.currentCountDown();
+
         if (selectedItem.type == ItemType.Consumable)
         {
             for (int i = 0; i < selectedItem.consumables.Length; i++)

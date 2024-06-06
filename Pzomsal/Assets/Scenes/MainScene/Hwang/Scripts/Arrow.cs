@@ -7,6 +7,22 @@ using UnityEngine.Pool;
 public class Arrow : MonoBehaviour
 {
     public int damage = 20; // 화살 데미지
+    public float rotationSpeed = 100f; // 회전 속도
+
+    private Rigidbody rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    private void FixedUpdate()
+    {
+        Vector3 direction = rb.velocity.normalized; // 화살의 방향
+        Quaternion targetRotation = Quaternion.LookRotation(direction); // 회전 각도
+
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime); // 화살 회전
+    }
 
     private void OnCollisionEnter(Collision collision)
     {

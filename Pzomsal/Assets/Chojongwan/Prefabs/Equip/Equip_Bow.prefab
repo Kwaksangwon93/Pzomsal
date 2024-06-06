@@ -54,7 +54,7 @@ MonoBehaviour:
   damage: 0
   useStamina: 10
   isZoomed: 0
-  arrowPrefab: {fileID: 8543738902001395619, guid: c0be18a97c570ef4c9ca971a3cf429ff, type: 3}
+  arrowPrefab: {fileID: 8543738902001395619, guid: 32df4033ef91b9041a0be46cfbe52462, type: 3}
   arrowSpawnPoint: {fileID: 5010143588269891075}
   zoomedFOV: 30
   arrowSpeed: 100

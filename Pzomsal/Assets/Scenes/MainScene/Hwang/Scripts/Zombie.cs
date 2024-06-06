@@ -210,6 +210,11 @@ public class Zombie : MonoBehaviour, IDamagable
         Destroy(gameObject);
     }
 
+    private void OnDestroy()
+    {
+        ZombieSpawner.Instance.ZombieKilled(); // 죽은 좀비 수에 대한 정보를 전달
+    }
+
     IEnumerator DamageFlash()
     {
         for (int i = 0; i < meshRenderers.Length; i++)
