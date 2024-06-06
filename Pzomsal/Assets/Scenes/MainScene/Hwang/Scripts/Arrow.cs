@@ -6,18 +6,20 @@ using UnityEngine.Pool;
 
 public class Arrow : MonoBehaviour
 {
-    public int damage = 20; // 화살의 데미지
+    public int damage = 20; // 화살 데미지
 
     private void OnCollisionEnter(Collision collision)
     {
-        // 충돌한 오브젝트가 IDamagable을 구현한 오브젝트인지 확인
-        if (collision.gameObject.TryGetComponent(out IDamagable damagable))
+        if (collision.gameObject.CompareTag("Player")) // 플레이어 예외 처리
         {
-            // 데미지를 입히는 메서드 호출
-            damagable.TakePhysicalDamage(damage);
+            return;
+        }
 
-            // 화살 제거
-            Destroy(gameObject);
+        if (collision.gameObject.TryGetComponent(out IDamagable damagable)) // 충돌한 오브젝트가 IDamagable을 구현한 오브젝트인지 확인
+        {
+            damagable.TakePhysicalDamage(damage); // 데미지를 입힘
+
+            Destroy(gameObject); // 화살 제거
         }
     }
 }
