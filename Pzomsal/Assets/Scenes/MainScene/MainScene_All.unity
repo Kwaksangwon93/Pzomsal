@@ -7858,7 +7858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 3650451126005667201, guid: 8537f1619327a0748a85e105e2887623, type: 3}
-  maxZombieCount: 0
+  maxZombieCount: 50
   minDistanceToPlayer: 30
   spawnRadius: 150
   spawnInterval: 20
