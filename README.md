@@ -32,9 +32,9 @@
 <br>
 
 # 🎬 실제 게임 화면 <br>
-|  |  |
-| --- | --- |
+
 | 시작 화면 | 게임 설명 화면 |
+|:----------:|:--------------:|
 | ![StartScene](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/befd3a71-a0c1-48b6-a4ae-d3b125ce175b) | ![HowToGame](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/ec73824b-3604-4490-97d9-73688c7afee7) |
 | 스토리 화면 | 게임 화면 |
 | ![StoryScene](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/de3c0b5c-cffe-4d28-9307-12b380a5db11) | ![MainScene](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/60ab3fc3-1c98-4cde-b59e-e9588502e814) |
