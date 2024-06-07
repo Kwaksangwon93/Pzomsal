@@ -9,13 +9,13 @@ public class GameStart : MonoBehaviour
 
     public void GameStartBtn()
     {
-        StartCoroutine(LoadMainScene());
+        StartCoroutine(LoadStoryScene());
     }
 
-    IEnumerator LoadMainScene()
+    IEnumerator LoadStoryScene()
     {
         yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadScene("MainScene");
-        StopCoroutine(LoadMainScene());
+        SceneManager.LoadScene("StoryScene");
+        StopCoroutine(LoadStoryScene());
     }
 }
