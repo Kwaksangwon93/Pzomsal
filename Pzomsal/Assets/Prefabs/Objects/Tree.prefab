@@ -179,9 +179,9 @@ GameObject:
   - component: {fileID: 5429663608847733194}
   - component: {fileID: 7059752511073588744}
   - component: {fileID: 3109122137964164339}
-  - component: {fileID: 4595550310474480526}
   - component: {fileID: -1012366721627362465}
   - component: {fileID: 1569515142353467807}
+  - component: {fileID: 5963140224632719783}
   m_Layer: 9
   m_Name: Tree
   m_TagString: Untagged
@@ -255,21 +255,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8082862, y: 3.6200898, z: 0.8934927}
   m_Center: {x: -0.095856905, y: 1.3100449, z: -0.05325365}
---- !u!114 &4595550310474480526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4706233686776179573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b31a4ca1c16c1049a3daaf376d5c347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: 5ecc14062087fa54e8810dd5888c96b5, type: 2}
-  quantityPerHit: 3
-  capacity: 5
 --- !u!208 &-1012366721627362465
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -301,6 +286,21 @@ MonoBehaviour:
   index: 0
   treeSpawnPoint: {fileID: 0}
   ironSpawnPoint: {fileID: 0}
+--- !u!114 &5963140224632719783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4706233686776179573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9cb70c5c5c078944827aaf31ee0c179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive: {fileID: 11400000, guid: 5ecc14062087fa54e8810dd5888c96b5, type: 2}
+  quantityPerHit: 3
+  capacity: 1
 --- !u!1 &8624698987465028163
 GameObject:
   m_ObjectHideFlags: 0

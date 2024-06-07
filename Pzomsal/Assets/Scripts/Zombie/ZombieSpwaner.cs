@@ -80,6 +80,8 @@ public class ZombieSpawner : MonoBehaviour
 
         GameObject zombie = Instantiate(zombiePrefab, randomPosition, Quaternion.identity);
         zombie.transform.parent = zombies.transform;
+
+        currentZombieCount++;
     }
 
     Vector3 GetRandomNavMeshPosition()

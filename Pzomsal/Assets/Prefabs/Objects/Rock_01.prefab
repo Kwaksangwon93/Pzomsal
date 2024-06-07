@@ -93,10 +93,10 @@ GameObject:
   m_Component:
   - component: {fileID: 509368146865521472}
   - component: {fileID: 720331787800017374}
-  - component: {fileID: 5060717029011560279}
   - component: {fileID: 5116450846842923736}
   - component: {fileID: 949787527476709424}
   - component: {fileID: 1047345713556807686}
+  - component: {fileID: 190915652302576041}
   m_Layer: 9
   m_Name: Rock_01
   m_TagString: Untagged
@@ -149,21 +149,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 6673853895116734463}
   m_Enabled: 1
---- !u!114 &5060717029011560279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6693782793470717646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b31a4ca1c16c1049a3daaf376d5c347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f2e8f6cae2917804e8e728bec12744b0, type: 2}
-  quantityPerHit: 3
-  capacity: 5
 --- !u!65 &5116450846842923736
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -216,6 +201,21 @@ MonoBehaviour:
   index: 0
   treeSpawnPoint: {fileID: 0}
   ironSpawnPoint: {fileID: 0}
+--- !u!114 &190915652302576041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6693782793470717646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9cb70c5c5c078944827aaf31ee0c179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive: {fileID: 11400000, guid: f2e8f6cae2917804e8e728bec12744b0, type: 2}
+  quantityPerHit: 3
+  capacity: 1
 --- !u!1 &8704447417116287791
 GameObject:
   m_ObjectHideFlags: 0
