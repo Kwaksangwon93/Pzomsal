@@ -204,6 +204,8 @@ public class UIInventory : MonoBehaviour
                         condition.Eat(selectedItem.consumables[i].value); break;
                     case ConsumableType.Thirst:
                         condition.Drink(selectedItem.consumables[i].value); break;
+                    case ConsumableType.Ending:
+                        condition.GameOver(selectedItem.consumables[i].value); break;
                 }
             }
             RemoveSelectedItem();

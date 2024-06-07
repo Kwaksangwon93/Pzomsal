@@ -15,11 +15,13 @@ MonoBehaviour:
   displayName: "\uD0C8\uCD9C \uD5EC\uAE30 \uD638\uCD9C\uC6A9 \uBB34\uC804\uAE30"
   description: "\uD0C8\uCD9C\uC744 \uC704\uD55C \uD5EC\uAE30\uB97C \uBD80\uB97C\uC218\uC788\uB294
     \uBB3C\uAC74\uC774\uB2E4."
-  type: 0
+  type: 2
   weaponType: -1
   icon: {fileID: 21300000, guid: d1f09aaed345ecc41b41dad69c53cde2, type: 3}
   dropPrefab: {fileID: 8770260535758429105, guid: 8cc1d4bddbb09754e880f28a925d9a44, type: 3}
   canStack: 1
   maxStackAmount: 12
-  consumables: []
+  consumables:
+  - type: 3
+    value: 1
   equipPrefab: {fileID: 0}
