@@ -42,6 +42,6 @@
 | ![Zombie](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/736d5b75-ca76-4364-8545-400a1d96d6e6) | ![InventoryMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/6db45851-ee3a-428b-8721-ee5ccea2eba9) |
 | 퀴즈 화면 | 건설 화면 |
 | ![QuizMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/619fd1fd-90db-448b-be49-1950a93c9cf6) | ![BulidingMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/008837b8-8c53-433b-b1b9-b78c38405693) |
-| 정지 회면 |
+| 설정창 |
 | ![PauseMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/e854e2e8-3684-46e1-b5fd-a02634f7a9aa) |
 <br><br>
