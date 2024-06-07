@@ -11,8 +11,6 @@ public class Menu : MonoBehaviour
     [HideInInspector]
     public bool canOpen = true;
 
-    private PlayerController playerController;
-
     public void OnMenuButton(InputAction.CallbackContext callbackContext)
     {
         if (callbackContext.phase == InputActionPhase.Started)
@@ -26,7 +24,7 @@ public class Menu : MonoBehaviour
     {
         bool toggle = Cursor.lockState == CursorLockMode.Locked;
         Cursor.lockState = toggle ? CursorLockMode.None : CursorLockMode.Locked;
-        canOpen = !toggle;
+        canOpen = !canOpen;
     }
 
     void ToggleMenu()
@@ -47,8 +45,13 @@ public class Menu : MonoBehaviour
 
     public void Continue()
     {
-        menuPanel.SetActive(false);
         ToggleCursor();
+        if (!canOpen)
+        {
+            canOpen = true;
+        }
+
+        ToggleMenu();
     }
 
     public void GoToStartScene()
