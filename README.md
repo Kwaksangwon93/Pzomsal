@@ -30,13 +30,13 @@
 |  |  |
 | --- | --- |
 | 스토리 화면  | 시작 화면 |
-| ![StoryScene](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/1df6579f-58d0-4664-8b7f-d11d662d744d) | ![StartScene](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/b68b5042-fdf8-48cb-bf15-c0e8a4493514) |
+| ![StoryScene](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/de3c0b5c-cffe-4d28-9307-12b380a5db11) | ![StartScene](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/befd3a71-a0c1-48b6-a4ae-d3b125ce175b) |
 | 게임 설명 화면 | 게임 화면 |
-| ![HowToGame](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/4455cd17-f5e9-4e5c-bb94-51796ccf2f04) | ![MainScene](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/3e7fd332-c30f-4660-a56a-8cb6de5bf6f9) |
+| ![HowToGame](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/ec73824b-3604-4490-97d9-73688c7afee7) | ![MainScene](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/60ab3fc3-1c98-4cde-b59e-e9588502e814) |
 | 좀비 출현 | 인벤토리 |
-| ![Zombie](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/cc81d00c-7664-42a7-ba88-a74fa91150ea) | ![InventoryMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/3eb79bf5-f473-4204-9540-2d8170c47c32) |
+| ![Zombie](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/736d5b75-ca76-4364-8545-400a1d96d6e6) | ![InventoryMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/6db45851-ee3a-428b-8721-ee5ccea2eba9) |
 | 퀴즈 화면 | 건설 화면 |
-| ![QuizMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/b0b20302-ab8e-4b42-801f-dcf5a47e8b93) | ![BulidingMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/b3734958-d716-4add-9a34-a8abd945a100) |
+| ![QuizMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/619fd1fd-90db-448b-be49-1950a93c9cf6) | ![BulidingMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/008837b8-8c53-433b-b1b9-b78c38405693) |
 | 정지 회면 |
-| ![PauseMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/84b9eb3b-b036-405a-a607-020195470257) |
+| ![PauseMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/e854e2e8-3684-46e1-b5fd-a02634f7a9aa) |
 <br><br>
