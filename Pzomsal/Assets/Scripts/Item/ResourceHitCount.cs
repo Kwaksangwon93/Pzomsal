@@ -18,7 +18,7 @@ public class ResourceHitCount : MonoBehaviour
 
         if (capacity <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

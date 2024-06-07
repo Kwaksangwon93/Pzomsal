@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resouerces:
-  - {fileID: 4706233686776179573, guid: b3a81ee1b08d72e43afbb8be60388ecb, type: 3}
-  - {fileID: 6693782793470717646, guid: 2ba0889da1340d2419512154c15af578, type: 3}
+  - {fileID: 2016839083944124018, guid: b3a81ee1b08d72e43afbb8be60388ecb, type: 3}
+  - {fileID: 3147504355373561008, guid: 2ba0889da1340d2419512154c15af578, type: 3}
