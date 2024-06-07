@@ -26,33 +26,32 @@ public class PlayerEquipment : MonoBehaviour
 
     public void OnAttackInput(InputAction.CallbackContext context)
     {
-        if (curEquip != null && controller.canLook)
+        if (curEquip != null && controller.canLook && context.phase == InputActionPhase.Performed)
         {
-            if (context.phase == InputActionPhase.Performed)
+            Debug.Log("공격시도");
+            if (curEquip.weaponType == WeaponType.Bow)
             {
-                Debug.Log("공격시도");
-                if (curEquip.weaponType == WeaponType.Arrow)
+                if (isZoomed && InventoryContainsArrow()) // 줌이 되어 있고 화살이 1개 이상일 때
                 {
-                    if (isZoomed && InventoryContainsArrow()) // 줌이 되어 있고 화살이 1개 이상일 때
-                    {
-
-                        curEquip.OnAttackInput();
-
-                        arrowSlot.quantity--; // 화살을 사용한 후 수량을 감소
-                        if (arrowSlot.quantity <= 0)
-                        {
-                            arrowSlot.item = null;
-                        }
-                        inventory.UpdateUI();
-                    }
-                }
-                else
-                {
-                    Debug.Log("공격");
-                    curEquip.OnAttackInput();
+                    curEquip.OnAttackInput(() => { UseArrow(); });
                 }
             }
+            else
+            {
+                Debug.Log("공격");
+                curEquip.OnAttackInput();
+            }
         }
+    }
+
+    public void UseArrow()
+    {
+        arrowSlot.quantity--; // 화살을 사용한 후 수량을 감소
+        if (arrowSlot.quantity <= 0)
+        {
+            arrowSlot.item = null;
+        }
+        inventory.UpdateUI();
     }
 
     bool InventoryContainsArrow()
@@ -74,7 +73,7 @@ public class PlayerEquipment : MonoBehaviour
 
     public void OnZoomInput(InputAction.CallbackContext context)
     {
-        if (curEquip != null && controller.canLook && curEquip.weaponType == WeaponType.Arrow)
+        if (curEquip != null && controller.canLook && curEquip.weaponType == WeaponType.Bow)
         {
             if (context.phase == InputActionPhase.Performed) // 누르고 있을 때
             {

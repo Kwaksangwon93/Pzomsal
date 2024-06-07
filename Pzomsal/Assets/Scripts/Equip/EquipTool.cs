@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem.XR;
 
 public class EquipTool : Equip
@@ -37,7 +39,7 @@ public class EquipTool : Equip
         camera = mainCamera; // camera 변수를 mainCamera로 초기화합니다.
     }
 
-    public override void OnAttackInput()
+    public override void OnAttackInput(UnityAction Callback = null)
     {
         if (!attacking)
         {
@@ -46,6 +48,7 @@ public class EquipTool : Equip
                 attacking = true;
                 animator.SetTrigger("Attack");
                 Invoke("OnCanAttack", attackRate);
+                Callback?.Invoke();
             }
         }
     }
