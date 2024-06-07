@@ -4,7 +4,8 @@ public enum ItemType
 {
     Resource,
     Equipable,
-    Consumable
+    Consumable,
+    Radio
 }
 
 public enum ConsumableType

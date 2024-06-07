@@ -75,6 +75,8 @@ public class UIInventory : MonoBehaviour
     public void AddItem()
     {
         ItemData data = CharacterManager.Instance.Player.itemData;
+        
+
         //아이템이 중복 가능한지 canStack
         if (data.canStack)
         {
@@ -102,7 +104,12 @@ public class UIInventory : MonoBehaviour
         ThrowItem(data);
         CharacterManager.Instance.Player.itemData = null;
     }
-
+    private void OnRadioItemAdded()
+    {
+        // 아이템 추가를 감지했을 때 수행할 동작
+        Debug.Log("Item_Radio가 인벤토리에 추가되었습니다.");
+        // 여기서 추가로 원하는 동작을 구현할 수 있습니다.
+    }
     public void ThrowItem(ItemData data)
     {
         Instantiate(data.dropPrefab, dropPosition.position, Quaternion.Euler(Vector3.one * Random.value * 360));
