@@ -10,11 +10,16 @@ public class PlayerCondition : MonoBehaviour , IDamagable
 {
     public UICondition uiCondition;
     public GameObject quiz;
+    public GameObject endingPanel;
+    public UIInventory inventory;
+
+    bool isEnd = false;
 
     Condition health { get { return uiCondition.health; } }
     Condition stamina { get { return uiCondition.stamina; } }
     Condition hungry { get { return uiCondition.hungry; } }
     Condition thirst { get { return uiCondition.thirst; } }
+    Condition ending { get { return uiCondition.ending; } }
 
     private void Awake()
     {
@@ -54,6 +59,12 @@ public class PlayerCondition : MonoBehaviour , IDamagable
         {
             Die();
         }
+
+        if (isEnd == false && ending.curValue == 1f)
+        {
+            isEnd = true;
+            End();
+        }
     }
 
     public void Heal(float amount)
@@ -71,9 +82,21 @@ public class PlayerCondition : MonoBehaviour , IDamagable
         thirst.Add(amount);   
     }
 
+    public void GameOver(float amount)
+    {
+        ending.Add(amount);
+    }
+
     public void Die()
     {
         quiz.gameObject.SetActive(true);
+    }
+
+    public void End()
+    {
+        inventory.gameObject.SetActive(false);
+        endingPanel.gameObject.SetActive(true);
+        Time.timeScale = 0.0f;
     }
 
     public void TakePhysicalDamage(int damageAmount)

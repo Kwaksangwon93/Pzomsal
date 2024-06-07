@@ -12,7 +12,8 @@ public enum ConsumableType
 {
     Health,
     Hunger,
-    Thirst
+    Thirst,
+    Ending
 }
 
 public enum WeaponType
