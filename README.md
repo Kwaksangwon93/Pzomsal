@@ -5,8 +5,8 @@
 일어나 보니 비행기는 추락 중! <br>
 좀비 섬에 조난 당한 나는 꼭 다시 돌아가서 휴가를 즐기겠다고 다짐한다. <br>
 <br>
-<p>
-# 🎮 게임 조작 방법
+
+# 🎮 게임 조작 방법 <br>
 - WASD : 이동 <br>
 - SPASE : 점프 <br>
 - E : 상호작용 <br>
@@ -15,22 +15,22 @@
 - RIGHT MOUSE : 활 조준 <br>
 - B : 제작 <br>
 - ESC : 설정 <br>
-</p>
-<p>
+<br>
+
 # 🕹 게임 목표 <br>
 - 자원을 채집하여 재료를 모으고 장비를 제작하고 좀비를 해치우며 섬을 탈출하세요. <br>
-</p>
-<p>
+<br>
+
 # 📖 개발기간 <br>
 - 6/3 ~ 6/10 <br>
-</p>
-<p>
+<br>
+
 # 개발 환경 <br>
 - 언어: C# <br>
 - 통합 개발 환경 (IDE): Visual Studio <br>
 - 게임 엔진: Unity <br>
-</p>
-<p>
+<br>
+
 # 🎬 실제 게임 화면 <br>
 |  |  |
 | --- | --- |
@@ -44,5 +44,4 @@
 | ![QuizMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/619fd1fd-90db-448b-be49-1950a93c9cf6) | ![BulidingMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/008837b8-8c53-433b-b1b9-b78c38405693) |
 | 정지 회면 |
 | ![PauseMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/e854e2e8-3684-46e1-b5fd-a02634f7a9aa) |
-</p>
 <br><br>
