@@ -6,7 +6,7 @@ public class ItemSpawn : MonoBehaviour
     [SerializeField] private GameObject[] items = null;
     public int[] maxItemCount;
     private int[] currentCount;
-    public float itemregen = 5f;
+    public float itemregen = 10f;
     private float curTime;
 
     private GameObject[] categoryObjects;

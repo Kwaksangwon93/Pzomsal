@@ -17,6 +17,7 @@ public enum ConsumableType
 public enum WeaponType
 {
     Default = -1,
+    Bow,
     Arrow,
     Ax,
     Pickaxe,
