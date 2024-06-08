@@ -35,22 +35,12 @@
 
 | **시작 화면** | **게임 설명 화면** |
 |:-------------:|:------------------:|
-| [![StartScene]](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/befd3a71-a0c1-48b6-a4ae-d3b125ce175b) | [![HowToGame]](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/ec73824b-3604-4490-97d9-73688c7afee7) |
+| ![StartScene](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/befd3a71-a0c1-48b6-a4ae-d3b125ce175b) | ![HowToGame](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/ec73824b-3604-4490-97d9-73688c7afee7) |
 | **스토리 화면** | **게임 화면** |
-| [![StoryScene]](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/de3c0b5c-cffe-4d28-9307-12b380a5db11) | [![MainScene]](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/60ab3fc3-1c98-4cde-b59e-e9588502e814) |
+| ![StoryScene](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/de3c0b5c-cffe-4d28-9307-12b380a5db11) | ![MainScene](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/60ab3fc3-1c98-4cde-b59e-e9588502e814) |
 | **좀비 출현** | **인벤토리** |
-| [![Zombie]](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/736d5b75-ca76-4364-8545-400a1d96d6e6) | [![InventoryMenu]](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/6db45851-ee3a-428b-8721-ee5ccea2eba9) |
+| ![Zombie](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/736d5b75-ca76-4364-8545-400a1d96d6e6) | ![InventoryMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/6db45851-ee3a-428b-8721-ee5ccea2eba9) |
 | **건설 화면** | **설정창** |
-| [![BulidingMenu]](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/008837b8-8c53-433b-b1b9-b78c38405693) | [![PauseMenu]](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/e854e2e8-3684-46e1-b5fd-a02634f7a9aa) |
+| ![BulidingMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/008837b8-8c53-433b-b1b9-b78c38405693) | ![PauseMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/e854e2e8-3684-46e1-b5fd-a02634f7a9aa) |
 | **퀴즈 화면** | |
-| [![QuizMenu]](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/619fd1fd-90db-448b-be49-1950a93c9cf6) | |
-
-[StartScene]: https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/befd3a71-a0c1-48b6-a4ae-d3b125ce175b
-[HowToGame]: https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/ec73824b-3604-4490-97d9-73688c7afee7
-[StoryScene]: https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/de3c0b5c-cffe-4d28-9307-12b380a5db11
-[MainScene]: https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/60ab3fc3-1c98-4cde-b59e-e9588502e814
-[Zombie]: https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/736d5b75-ca76-4364-8545-400a1d96d6e6
-[InventoryMenu]: https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/6db45851-ee3a-428b-8721-ee5ccea2eba9
-[BulidingMenu]: https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/008837b8-8c53-433b-b1b9-b78c38405693
-[PauseMenu]: https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/e854e2e8-3684-46e1-b5fd-a02634f7a9aa
-[QuizMenu]: https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/619fd1fd-90db-448b-be49-1950a93c9cf6
+| ![QuizMenu](https://github.com/Kwaksangwon93/Pzomsal/assets/167050340/619fd1fd-90db-448b-be49-1950a93c9cf6) | |
