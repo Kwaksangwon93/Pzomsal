@@ -1,6 +1,4 @@
 using UnityEngine;
-using static UnityEditor.Progress;
-using static UnityEngine.Rendering.PostProcessing.SubpixelMorphologicalAntialiasing;
 
 public class HomeBuilding : MonoBehaviour
 {

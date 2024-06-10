@@ -3,7 +3,7 @@ using UnityEngine;
 public class ResourceHitCount : MonoBehaviour
 {
     public ItemData itemToGive;
-    public int quantityPerHit = 1;
+    public int quantityPerHit = 3;
     public int capacity;
 
     public void Gather(Vector3 hitPoint, Vector3 hitNormal)
@@ -18,7 +18,8 @@ public class ResourceHitCount : MonoBehaviour
 
         if (capacity <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            capacity = 1;
         }
     }
 }

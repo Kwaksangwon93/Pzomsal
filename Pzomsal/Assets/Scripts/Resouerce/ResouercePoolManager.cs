@@ -1,8 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections.LowLevel.Unsafe;
-using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement; // UnityEditor.SceneManagement 대신 사용
 
 public class ResouercePoolManager : MonoBehaviour
 {
@@ -10,12 +9,11 @@ public class ResouercePoolManager : MonoBehaviour
 
     List<GameObject>[] resouercePools;
 
-
     private void Awake()
     {
         resouercePools = new List<GameObject>[resouerces.Length];
 
-        for(int i = 0; i < resouercePools.Length; i++)
+        for (int i = 0; i < resouercePools.Length; i++)
         {
             resouercePools[i] = new List<GameObject>();
         }
@@ -40,7 +38,6 @@ public class ResouercePoolManager : MonoBehaviour
             select = Instantiate(resouerces[index], transform);
             resouercePools[index].Add(select);
         }
-
 
         return select;
     }

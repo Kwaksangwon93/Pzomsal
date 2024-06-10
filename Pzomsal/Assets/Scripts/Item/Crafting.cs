@@ -1,6 +1,5 @@
 using UnityEngine;
-using static UnityEditor.Progress;
-using static UnityEngine.Rendering.PostProcessing.SubpixelMorphologicalAntialiasing;
+
 
 public class Crafting : MonoBehaviour
 {
@@ -51,7 +50,7 @@ public class Crafting : MonoBehaviour
     }
     public void Bow()
     {
-        int requiredWood = 15;
+        int requiredWood = 5;
         int requiredtape = 1;
 
         int woodCount = GetItemCount(woodItem);
@@ -132,13 +131,6 @@ public class Crafting : MonoBehaviour
                 if (slot.quantity == 0)
                 {
                     slot.item = null;
-                }
-
-                // 남은 수량이 0이면 업데이트 UI를 호출합니다.
-                if (quantity == 0)
-                {
-                    inventory.UpdateUI();
-                    return;
                 }
             }
         }

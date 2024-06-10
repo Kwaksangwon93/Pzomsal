@@ -12,9 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 curMovementInput;
     public float jumptForce;
     public LayerMask groundLayerMask;
-    public float maxJumpCount; // 추가: 최대 점프 횟수 변수
-    private int jumpCount; // 변경: 현재 점프 횟수 변수
-
+    
     [Header("Look")]
     public Transform cameraContainer;
     public float minXLook;
@@ -56,10 +54,6 @@ public class PlayerController : MonoBehaviour
         {
             CameraLook();
         }
-        if (IsGrounded())
-        {
-            jumpCount = 0; // 추가: 땅에 닿았을 때 점프 횟수 초기화
-        }
     }
 
     public void OnLookInput(InputAction.CallbackContext context)
@@ -81,22 +75,11 @@ public class PlayerController : MonoBehaviour
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Started && (IsGrounded() || jumpCount < maxJumpCount)) // 변경: IsGrounded()이거나 점프 횟수가 maxJumpCount보다 적으면 점프 가능
+        if (context.phase == InputActionPhase.Started && (IsGrounded())) // 변경: IsGrounded()이거나 점프 횟수가 maxJumpCount보다 적으면 점프 가능
         {
             rigidbody.AddForce(Vector2.up * jumptForce, ForceMode.Impulse);
-            jumpCount++; // 추가: 점프할 때마다 점프 횟수 증가
         }
         
-    }
-    public void JumpMaxCount(float value, float time)
-    {
-        StartCoroutine(JumpUp(value, time));
-    }
-    public IEnumerator JumpUp(float value, float time)
-    {
-        maxJumpCount += value;
-        yield return new WaitForSeconds(time);
-        maxJumpCount -= value;
     }
     private void Move()
     {
