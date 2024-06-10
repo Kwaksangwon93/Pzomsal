@@ -1173,7 +1173,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2710,9 +2710,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "- WASD : \uC774\uB3D9\n- Space\uBC14 : \uC810\uD504\n- E : \uC0C1\uD638\uC791\uC6A9\n-
-    B : \uC81C\uC791 / \uAC74\uC124\n- ESC : \uBA54\uB274\n\n- mouse \uC88C\uD074\uB9AD
-    : \uADFC\uAC70\uB9AC \uACF5\uACA9\n- mouse \uC6B0\uD074\uB9AD : \uC6D0\uAC70\uB9AC
-    \uACF5\uACA9"
+    B : \uC81C\uC791 / \uAC74\uC124\n- Tab : \uC778\uBCA4\uD1A0\uB9AC\n- ESC : \uBA54\uB274\n\n-
+    mouse \uC88C\uD074\uB9AD : \uADFC\uAC70\uB9AC \uACF5\uACA9\n- mouse \uC6B0\uD074\uB9AD
+    : \uC6D0\uAC70\uB9AC \uACF5\uACA9"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f777f042731163f409c2763d0a77576e, type: 2}
   m_sharedMaterial: {fileID: 5007359758313058471, guid: f777f042731163f409c2763d0a77576e, type: 2}
