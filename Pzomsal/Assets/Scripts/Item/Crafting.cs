@@ -134,12 +134,12 @@ public class Crafting : MonoBehaviour
                     slot.item = null;
                 }
 
-                // 남은 수량이 0이면 업데이트 UI를 호출합니다.
-                if (quantity == 0)
-                {
-                    inventory.UpdateUI();
-                    return;
-                }
+                //// 남은 수량이 0이면 업데이트 UI를 호출합니다.
+                //if (quantity == 0)
+                //{
+                //    inventory.UpdateUI();
+                //    return;
+                //}
             }
         }
 
