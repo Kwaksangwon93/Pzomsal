@@ -79,14 +79,23 @@ public class HomeBuilding : MonoBehaviour
                 if (slot.quantity >= quantity)
                 {
                     slot.quantity -= quantity;
-                    return;
+                    quantity = 0;
                 }
                 else
                 {
                     quantity -= slot.quantity;
                     slot.quantity = 0;
                 }
+
+                // 슬롯의 수량이 0이 되면 슬롯을 비웁니다.
+                if (slot.quantity == 0)
+                {
+                    slot.item = null;
+                }
             }
         }
+
+        // 모든 슬롯을 탐색한 후에도 quantity가 남아있는 경우 UI를 업데이트합니다.
+        inventory.UpdateUI();
     }
 }
