@@ -201,7 +201,7 @@ public class Zombie : MonoBehaviour, IDamagable
         {
             float randomValue = Random.Range(0f, 100f);
 
-            if (randomValue < 80f)
+            if (randomValue < 20f)
             {
                 Instantiate(dropOnDeath[i].dropPrefab, transform.position + Vector3.up * 2, Quaternion.identity);
             }
